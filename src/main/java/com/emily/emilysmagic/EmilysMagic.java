@@ -27,8 +27,6 @@ public class EmilysMagic
         ModBlocks.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
-
-        // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
     }
 

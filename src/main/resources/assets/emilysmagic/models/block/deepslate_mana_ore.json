@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "emilysmagic:block/deepslate_mana_ore"
+    "end": "emilysmagic:block/deepslate_mana_ore_top",
+    "side": "emilysmagic:block/deepslate_mana_ore"
   }
 }
