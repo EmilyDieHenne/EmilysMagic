@@ -49,6 +49,12 @@ public class EmilysMagic
         if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.MANA_BLOCK);
         }
+        if (event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.ITEM_ENDER_WAND);
+            event.accept(ModItems.ITEMS_FIRE_WAND);
+            event.accept(ModItems.ITEMS_POISON_WAND);
+            event.accept(ModItems.ITEMS_SAPPHIRE_WAND);
+        }
     }
 
 }

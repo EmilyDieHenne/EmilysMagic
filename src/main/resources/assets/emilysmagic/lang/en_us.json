@@ -2,5 +2,9 @@
   "item.emilysmagic.mana_cristal": "Mana Cristal",
   "block.emilysmagic.mana_block": "Mana Block",
   "block.emilysmagic.mana_ore": "Mana Ore",
-  "block.emilysmagic.deepslate_mana_ore": "Deepslate Mana Ore"
+  "block.emilysmagic.deepslate_mana_ore": "Deepslate Mana Ore",
+  "item.emilysmagic.poison_wand": "Poison Wand",
+  "item.emilysmagic.sapphire_wand": "Sapphire Wand",
+  "item.emilysmagic.fire_wand": "Fire Wand",
+  "item.emilysmagic.ender_wand": "Ender Wand",
 }
