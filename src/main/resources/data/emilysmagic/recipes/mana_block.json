@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "emilysmagic:mana_cristal"
+    }
+  },
+  "result": {
+    "item": "emilysmagic:mana_block",
+    "count": 1
+  }
+}

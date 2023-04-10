@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "emilysmagic:block/deepslate_mana_ore"
+  }
+}

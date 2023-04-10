@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "emilysmagic:mana_block"
+    }
+  ],
+  "result": {
+    "item": "emilysmagic:mana_cristal",
+    "count": 9
+  }
+}

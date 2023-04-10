@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "emilysmagic:mana_block",
+    "emilysmagic:mana_ore",
+    "emilysmagic:deepslate_mana_ore"
+  ]
+}
