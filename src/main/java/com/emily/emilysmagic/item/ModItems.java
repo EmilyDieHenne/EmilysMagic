@@ -30,8 +30,10 @@ public class ModItems {
     public static final RegistryObject<Item> ITEMS_LIGHTNING_WAND = ITEMS.register("lightning_wand",
             () -> new ItemLightningWand(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ITEMS_WIND_BOOTS = ITEMS.register("wind_boots",
-            () -> new ItemWindBoots(ArmorMaterials.LEATHER, ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1).defaultDurability(64)));
-        public static void register(IEventBus eventBus){
+            () -> new ItemWindBoots(ArmorMaterials.LEATHER, ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1).defaultDurability(46)));
+    public static final RegistryObject<Item> ITEMS_EARTH_LEGGINS = ITEMS.register("earth_leggins",
+            () -> new ItemEarthLeggins(ArmorMaterials.CHAIN, ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1).defaultDurability(99)));
+    public static void register(IEventBus eventBus){
             ITEMS.register(eventBus);
         }
 }

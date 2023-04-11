@@ -1,10 +1,12 @@
 package com.emily.emilysmagic.projectile;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
@@ -19,7 +21,8 @@ public class FireMagic extends AbstractArrow {
     }
     @Override
     protected void onHitBlock(BlockHitResult hitResult){
-
+        BlockPos result = hitResult.getBlockPos().above();
+        this.level.setBlockAndUpdate(result, Blocks.FIRE.defaultBlockState());
         this.discard();
     }
 

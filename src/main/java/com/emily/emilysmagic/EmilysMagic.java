@@ -59,6 +59,7 @@ public class EmilysMagic
             event.accept(ModItems.ITEMS_POISON_WAND);
             event.accept(ModItems.ITEMS_LIGHTNING_WAND);
             event.accept(ModItems.ITEMS_WIND_BOOTS);
+            event.accept(ModItems.ITEMS_EARTH_LEGGINS);
 
         }
     }
