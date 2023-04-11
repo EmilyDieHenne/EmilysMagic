@@ -2,6 +2,9 @@ package com.emily.emilysmagic.item;
 
 import com.emily.emilysmagic.EmilysMagic;
 import com.emily.emilysmagic.item.custom.*;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -22,10 +25,12 @@ public class ModItems {
             () -> new ItemSapphireWand(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ITEMS_POISON_WAND = ITEMS.register("poison_wand",
             () -> new ItemPoisonWand(new Item.Properties().stacksTo(1)));
-
     public static final RegistryObject<Item> ITEMS_FIRE_WAND = ITEMS.register("fire_wand",
             () -> new ItemFireWand(new Item.Properties().stacksTo(1)));
-
+    public static final RegistryObject<Item> ITEMS_LIGHTNING_WAND = ITEMS.register("lightning_wand",
+            () -> new ItemLightningWand(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ITEMS_WIND_BOOTS = ITEMS.register("wind_boots",
+            () -> new ItemWindBoots(ArmorMaterials.LEATHER, ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1).defaultDurability(64)));
         public static void register(IEventBus eventBus){
             ITEMS.register(eventBus);
         }
