@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " #E",
+    " /#",
+    "/  "
+  ],
+  "key": {
+    "#": {
+      "item": "emilysmagic:mana_cristal"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "emilysmagic:ender_wand",
+    "count": 1
+  }
+}

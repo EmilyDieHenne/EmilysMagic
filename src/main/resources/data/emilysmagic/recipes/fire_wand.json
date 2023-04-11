@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " #F",
+    " /#",
+    "/  "
+  ],
+  "key": {
+    "#": {
+      "item": "emilysmagic:mana_cristal"
+    },
+    "F": {
+      "item": "minecraft:fire_charge"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "emilysmagic:fire_wand",
+    "count": 1
+  }
+}

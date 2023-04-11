@@ -1,6 +1,8 @@
 package com.emily.emilysmagic.item.custom;
 
 
+import com.emily.emilysmagic.projectile.FireMagic;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 
@@ -11,6 +13,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import org.checkerframework.checker.units.qual.A;
 
 
 public class ItemFireWand extends Item {
@@ -24,33 +27,28 @@ public class ItemFireWand extends Item {
 
         if (!player.level.isClientSide() ){
 
-
-            Arrow arrow = new Arrow(world, player);
-            arrow.setSecondsOnFire(100);
-            arrow.setDeltaMovement(player.getLookAngle().yRot(0.2f));
-            player.level.addFreshEntity(arrow);
-
-            Arrow arrow1 = new Arrow(world, player);
-            arrow1.setSecondsOnFire(100);
-            arrow1.setDeltaMovement(player.getLookAngle());
-            player.level.addFreshEntity(arrow1);
-
-            Arrow arrow2 = new Arrow(world, player);
-            arrow2.setSecondsOnFire(100);
-            arrow2.setDeltaMovement(player.getLookAngle().yRot(-0.2f));
-            player.level.addFreshEntity(arrow2);
-
-
-
+            shootArrow(world, player, player.getLookAngle().yRot(0.2f));
+            shootArrow(world, player, player.getLookAngle().yRot(0.1f));
+            shootArrow(world, player, player.getLookAngle());
+            shootArrow(world, player, player.getLookAngle().yRot(-0.1f));
+            shootArrow(world, player, player.getLookAngle().yRot(-0.2f));
             player.getCooldowns().addCooldown(this, 60);
-        }
 
+        }
+        player.playSound(SoundEvents.FIRECHARGE_USE);
         return super.use( world, player, hand);
 
     }
 
 private void shootArrow(Level world, Player player, Vec3 direction){
 
+    FireMagic arrow = new FireMagic(world,player);
+    arrow.setSecondsOnFire(100);
+    arrow.setDeltaMovement(direction);
+    arrow.setInvisible(true);
+    arrow.setSilent(true);
+    arrow.onAddedToWorld();
+    player.level.addFreshEntity(arrow);
 }
 
 

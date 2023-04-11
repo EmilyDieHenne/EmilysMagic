@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " #F",
+    " /#",
+    "/  "
+  ],
+  "key": {
+    "#": {
+      "item": "emilysmagic:mana_cristal"
+    },
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "emilysmagic:sapphire_wand",
+    "count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " #P",
+    " /#",
+    "/  "
+  ],
+  "key": {
+    "#": {
+      "item": "emilysmagic:mana_cristal"
+    },
+    "P": {
+      "item": "minecraft:poisonous_potato"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "emilysmagic:poison_wand",
+    "count": 1
+  }
+}
