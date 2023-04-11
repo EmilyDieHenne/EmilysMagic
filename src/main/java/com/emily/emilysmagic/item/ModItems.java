@@ -9,13 +9,15 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
-        public static final DeferredRegister<Item> ITEMS =
-                DeferredRegister.create(ForgeRegistries.ITEMS, EmilysMagic.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS =
+            DeferredRegister.create(ForgeRegistries.ITEMS, EmilysMagic.MOD_ID);
 
-        public static final RegistryObject<Item> MANA_CRISTAL = ITEMS.register("mana_cristal",
-                () -> new Item(new Item.Properties().stacksTo(64)));
+    public static final RegistryObject<Item> ITEMS_MANA_CRISTAL = ITEMS.register("mana_cristal",
+            () -> new Item(new Item.Properties().stacksTo(64)));
     public static final RegistryObject<Item> ITEM_ENDER_WAND = ITEMS.register("ender_wand",
             () -> new ItemEnderWand(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ITEMS_ICE_WAND = ITEMS.register("ice_wand",
+            () -> new ItemIceWand(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ITEMS_SAPPHIRE_WAND = ITEMS.register("sapphire_wand",
             () -> new ItemSapphireWand(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ITEMS_POISON_WAND = ITEMS.register("poison_wand",

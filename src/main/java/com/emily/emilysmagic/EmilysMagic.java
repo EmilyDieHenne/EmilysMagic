@@ -38,7 +38,7 @@ public class EmilysMagic
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
         if (event.getTab() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.MANA_CRISTAL);
+            event.accept(ModItems.ITEMS_MANA_CRISTAL);
         }
 
         if (event.getTab() == CreativeModeTabs.NATURAL_BLOCKS) {
@@ -53,7 +53,7 @@ public class EmilysMagic
             event.accept(ModItems.ITEM_ENDER_WAND);
             event.accept(ModItems.ITEMS_FIRE_WAND);
             event.accept(ModItems.ITEMS_POISON_WAND);
-            event.accept(ModItems.ITEMS_SAPPHIRE_WAND);
+            event.accept(ModItems.ITEMS_SAPPHIRE_WAND);event.accept(ModItems.ITEMS_ICE_WAND);
         }
     }
 
