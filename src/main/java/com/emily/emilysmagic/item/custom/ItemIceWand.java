@@ -64,6 +64,6 @@ public class ItemIceWand extends Item {
         return  blockState == Blocks.WATER.defaultBlockState() ||
                 blockState == Blocks.SEAGRASS.defaultBlockState() ||
                 blockState == Blocks.KELP_PLANT.defaultBlockState() ||
-                blockState == Blocks.KELP.defaultBlockState(); //KLAPPT NOCH NICHT BITTE FIXEN DANKE BIN VIEL ZU MÜDE
+                blockState == Blocks.KELP.defaultBlockState();
     }
 }

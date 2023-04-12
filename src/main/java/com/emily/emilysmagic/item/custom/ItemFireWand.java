@@ -27,11 +27,17 @@ public class ItemFireWand extends Item {
 
         if (!player.level.isClientSide() ){
 
+
             shootArrow(world, player, player.getLookAngle().yRot(0.2f));
+            shootArrow(world, player, player.getLookAngle().yRot(0.15f));
             shootArrow(world, player, player.getLookAngle().yRot(0.1f));
+            shootArrow(world, player, player.getLookAngle().yRot(0.05f));
             shootArrow(world, player, player.getLookAngle());
+            shootArrow(world, player, player.getLookAngle().yRot(-0.05f));
             shootArrow(world, player, player.getLookAngle().yRot(-0.1f));
+            shootArrow(world, player, player.getLookAngle().yRot(-0.15f));
             shootArrow(world, player, player.getLookAngle().yRot(-0.2f));
+
             player.getCooldowns().addCooldown(this, 60);
 
         }
