@@ -9,15 +9,15 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
 
-public class ItemEarthLeggins extends ArmorItem {
+public class ItemEarthLeggings extends ArmorItem {
 
 
-    public ItemEarthLeggins(ArmorMaterial material, Type type, Properties properties) {
+    public ItemEarthLeggings(ArmorMaterial material, Type type, Properties properties) {
         super(material, type, properties);
     }
 
     @Override
     public void onArmorTick(ItemStack stack, Level level, Player player) {
-        player.addEffect(new MobEffectInstance(MobEffects.JUMP, 200, 2));
+        player.addEffect(new MobEffectInstance(MobEffects.JUMP, 100, 2));
     }
 }

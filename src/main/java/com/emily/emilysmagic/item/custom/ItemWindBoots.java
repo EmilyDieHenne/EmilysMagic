@@ -25,7 +25,7 @@ public class ItemWindBoots extends ArmorItem {
 
     @Override
     public void onArmorTick(ItemStack stack, Level level, Player player) {
-        player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 1));
-        player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 1));
+        player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100, 1));
+        player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 100, 1));
     }
 }

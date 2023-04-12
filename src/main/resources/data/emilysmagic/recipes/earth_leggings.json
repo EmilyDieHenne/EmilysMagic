@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DCD",
+    "D D",
+    "M M"
+  ],
+  "key": {
+    "M": {
+      "item": "emilysmagic:mana_cristal"
+    },
+    "D": {
+      "item": "minecraft:dirt"
+    },
+    "C": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "result": {
+    "item": "emilysmagic:earth_leggings",
+    "count": 1
+  }
+}

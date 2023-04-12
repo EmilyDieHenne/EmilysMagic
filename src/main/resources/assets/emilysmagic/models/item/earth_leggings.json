@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "emilysmagic:item/earth_leggins"
+    "layer0": "emilysmagic:item/earth_leggings"
   }
 }

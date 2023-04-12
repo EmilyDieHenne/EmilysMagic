@@ -1,0 +1,15 @@
+{
+  "item.emilysmagic.mana_cristal": "Manakristall",
+  "block.emilysmagic.mana_block": "Manablock",
+  "block.emilysmagic.mana_ore": "Manaerz",
+  "block.emilysmagic.deepslate_mana_ore": "Tiefenschiefer-Manaerz",
+  "item.emilysmagic.poison_wand": "Giftstab",
+  "item.emilysmagic.sapphire_wand": "Saphirstab",
+  "item.emilysmagic.fire_wand": "Infernostab",
+  "item.emilysmagic.ender_wand": "Enderstab",
+  "item.emilysmagic.ice_wand": "Eisstab",
+  "item.emilysmagic.lightning_wand": "Gewitterstab",
+  "item.emilysmagic.wind_boots": "Windstiefel",
+  "item.emilysmagic.earth_leggings": "Erdhose"
+
+}
