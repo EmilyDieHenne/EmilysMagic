@@ -1,0 +1,16 @@
+{
+  "structures": [
+    {
+      "structure": "emilysmagic:witch_ritual",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 1640138424,
+    "spacing": 20,
+    "processors": "emilysmagic:witch_ritual",
+    "projection": "rigid",
+    "separation": 6,
+    "type": "minecraft:random_spread"
+  }
+}
