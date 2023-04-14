@@ -35,8 +35,10 @@ public class FireMagic extends AbstractArrow {
 
         BlockState block = this.level.getBlockState(blockPos);
         return (block == Blocks.AIR.defaultBlockState() ||
+                block == Blocks.VINE.defaultBlockState() ||
+                block == Blocks.FERN.defaultBlockState() ||
                 block == Blocks.GRASS.defaultBlockState() ||
-                block == Blocks.TALL_GRASS.defaultBlockState() );
+                block == Blocks.TALL_GRASS.defaultBlockState());
     }
     @Override
     protected ItemStack getPickupItem() {
