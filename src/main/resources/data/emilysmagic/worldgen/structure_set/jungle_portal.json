@@ -1,0 +1,16 @@
+{
+  "structures": [
+    {
+      "structure": "emilysmagic:jungle_portal",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 1640138424,
+    "spacing": 20,
+    "processors": "emilysmagic:jungle_portal",
+    "projection": "rigid",
+    "separation": 6,
+    "type": "minecraft:random_spread"
+  }
+}
