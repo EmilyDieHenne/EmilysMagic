@@ -2,8 +2,8 @@ package com.emily.emilysmagic.item;
 
 import com.emily.emilysmagic.EmilysMagic;
 import com.emily.emilysmagic.item.custom.*;
+import com.emily.emilysmagic.materials.ModEarthMaterial;
 import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -30,10 +30,15 @@ public class ModItems {
             () -> new ItemFireWand(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ITEMS_LIGHTNING_WAND = ITEMS.register("lightning_wand",
             () -> new ItemLightningWand(new Item.Properties().stacksTo(1)));
-    public static final RegistryObject<Item> ITEMS_WIND_BOOTS = ITEMS.register("wind_boots",
-            () -> new ItemWindBoots(ArmorMaterials.LEATHER, ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1).defaultDurability(46)));
-    public static final RegistryObject<Item> ITEMS_EARTH_LEGGINGS = ITEMS.register("earth_leggings",
-            () -> new ItemEarthLeggings(ArmorMaterials.CHAIN, ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1).defaultDurability(99)));
+     public static final RegistryObject<Item> ITEMS_EARTH_HELMET = ITEMS.register("earth_helmet",
+            () -> new ItemEarthArmor(ModEarthMaterial.EARTH_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1).defaultDurability(91)));
+      public static final RegistryObject<Item> ITEMS_EARTH_CHESTPLATE = ITEMS.register("earth_chestplate",
+            () -> new ItemEarthArmor(ModEarthMaterial.EARTH_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1).defaultDurability(122)));
+      public static final RegistryObject<Item> ITEMS_EARTH_LEGGINGS = ITEMS.register("earth_leggings",
+            () -> new ItemEarthArmor(ModEarthMaterial.EARTH_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1).defaultDurability(115)));
+      public static final RegistryObject<Item> ITEMS_EARTH_BOOTS = ITEMS.register("earth_boots",
+            () -> new ItemEarthArmor(ModEarthMaterial.EARTH_MATERIAL, ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1).defaultDurability(101)));
+
     public static void register(IEventBus eventBus){
             ITEMS.register(eventBus);
         }
