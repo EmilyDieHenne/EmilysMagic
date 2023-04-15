@@ -72,8 +72,12 @@ public class EmilysMagic
                             tab.accept(ModItems.ITEMS_FIRE_WAND.get());
                             tab.accept(ModItems.ITEMS_POISON_WAND.get());
                             tab.accept(ModItems.ITEMS_LIGHTNING_WAND.get());
-                            tab.accept(ModItems.ITEMS_WIND_BOOTS.get());
+
+                            tab.accept(ModItems.ITEMS_EARTH_HELMET.get());
+                            tab.accept(ModItems.ITEMS_EARTH_CHESTPLATE.get());
                             tab.accept(ModItems.ITEMS_EARTH_LEGGINGS.get());
+                            tab.accept(ModItems.ITEMS_EARTH_BOOTS.get());
+
                             tab.accept(ModItems.ITEMS_MANA_CRISTAL.get());
                             tab.accept(ModBlocks.MANA_ORE.get());
                             tab.accept(ModBlocks.DEEPSLATE_MANA_ORE.get());
