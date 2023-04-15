@@ -29,8 +29,6 @@ public class ItemIceWand extends Item {
             player.playSound(SoundEvents.PLAYER_HURT_FREEZE);
         }
 
-
-
         return super.use( world, player, hand);
 
     }
@@ -63,6 +61,7 @@ public class ItemIceWand extends Item {
     private boolean checkIfEmpty(BlockState blockState){
         return  blockState == Blocks.WATER.defaultBlockState() ||
                 blockState == Blocks.SEAGRASS.defaultBlockState() ||
+                blockState == Blocks.TALL_SEAGRASS.defaultBlockState() ||
                 blockState == Blocks.KELP_PLANT.defaultBlockState() ||
                 blockState == Blocks.KELP.defaultBlockState();
     }

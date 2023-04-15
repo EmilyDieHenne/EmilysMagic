@@ -3,10 +3,14 @@ package com.emily.emilysmagic;
 import com.emily.emilysmagic.block.ModBlocks;
 import com.emily.emilysmagic.item.ModItems;
 import com.mojang.logging.LogUtils;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -49,19 +53,30 @@ public class EmilysMagic
         if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.MANA_BLOCK);
         }
-        if (event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ModItems.ITEM_ENDER_WAND);
-            event.accept(ModItems.ITEMS_SAPPHIRE_WAND);
-            event.accept(ModItems.ITEMS_ICE_WAND);
-        }
-        if (event.getTab() == CreativeModeTabs.COMBAT) {
-            event.accept(ModItems.ITEMS_FIRE_WAND);
-            event.accept(ModItems.ITEMS_POISON_WAND);
-            event.accept(ModItems.ITEMS_LIGHTNING_WAND);
-            event.accept(ModItems.ITEMS_WIND_BOOTS);
-            event.accept(ModItems.ITEMS_EARTH_LEGGINGS);
 
+    }
+    @Mod.EventBusSubscriber(modid = EmilysMagic.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    public static final class ModEvents {
+        @SubscribeEvent
+        public static void onCreativeTabRegistry(CreativeModeTabEvent.Register event) {
+            event.registerCreativeModeTab(new ResourceLocation(EmilysMagic.MOD_ID, "mytab"), builder -> {
+                builder.title(Component.translatable("item_group." + EmilysMagic.MOD_ID + ".emilysmagic"))
+                        .icon(() -> new ItemStack(ModItems.ITEMS_SAPPHIRE_WAND.get()))
+                        .displayItems((enabledFlags, tab) -> {
+                            tab.accept(ModItems.ITEM_ENDER_WAND.get());
+                            tab.accept(ModItems.ITEMS_SAPPHIRE_WAND.get());
+                            tab.accept(ModItems.ITEMS_ICE_WAND.get());
+                            tab.accept(ModItems.ITEMS_FIRE_WAND.get());
+                            tab.accept(ModItems.ITEMS_POISON_WAND.get());
+                            tab.accept(ModItems.ITEMS_LIGHTNING_WAND.get());
+                            tab.accept(ModItems.ITEMS_WIND_BOOTS.get());
+                            tab.accept(ModItems.ITEMS_EARTH_LEGGINGS.get());
+                            tab.accept(ModItems.ITEMS_MANA_CRISTAL.get());
+                            tab.accept(ModBlocks.MANA_ORE.get());
+                            tab.accept(ModBlocks.DEEPSLATE_MANA_ORE.get());
+                            tab.accept(ModBlocks.MANA_BLOCK.get());
+                        });
+            });
         }
     }
-
 }
