@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "   ",
-    "M M",
-    "F F"
+    "D D",
+    "M M"
   ],
   "key": {
     "M": {
       "item": "emilysmagic:mana_cristal"
     },
-    "F": {
-      "item": "minecraft:feather"
+    "D": {
+      "item": "minecraft:dirt"
     }
   },
   "result": {
-    "item": "emilysmagic:wind_boots",
+    "item": "emilysmagic:earth_boots",
     "count": 1
   }
 }

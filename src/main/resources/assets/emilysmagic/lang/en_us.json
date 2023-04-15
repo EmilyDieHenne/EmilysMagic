@@ -10,8 +10,9 @@
   "item.emilysmagic.ice_wand": "Ice Wand",
   "item.emilysmagic.lightning_wand": "Lightning Wand",
   "item.emilysmagic.earth_wand": "Earth Wand",
-  "item.emilysmagic.wind_boots": "Wind Boots",
-  "item.emilysmagic.earth_leggings": "Earth Leggings",
+  "item.emilysmagic.earth_helmet": "Elemental Helmet",
+  "item.emilysmagic.earth_chestplate": "Elemental Chestplate",
+  "item.emilysmagic.earth_leggings": "Elemental Leggings",
+  "item.emilysmagic.earth_boots": "Elemental Boots",
   "item_group.emilysmagic.emilysmagic": "Emily's Magic"
-
 }

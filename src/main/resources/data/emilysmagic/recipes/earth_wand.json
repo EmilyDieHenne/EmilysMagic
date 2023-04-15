@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " #D",
+    " /#",
+    "/  "
+  ],
+  "key": {
+    "#": {
+      "item": "emilysmagic:mana_cristal"
+    },
+    "D": {
+      "item": "minecraft:dirt"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "emilysmagic:earth_wand",
+    "count": 1
+  }
+}

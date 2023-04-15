@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "DDD",
+    "M M"
+  ],
+  "key": {
+    "M": {
+      "item": "emilysmagic:mana_cristal"
+    },
+    "D": {
+      "item": "minecraft:dirt"
+    }
+  },
+  "result": {
+    "item": "emilysmagic:earth_helmet",
+    "count": 1
+  }
+}
