@@ -5,6 +5,7 @@ import com.emily.emilysmagic.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -55,6 +56,7 @@ public class EmilysMagic
         }
 
     }
+
     @Mod.EventBusSubscriber(modid = EmilysMagic.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static final class ModEvents {
         @SubscribeEvent
@@ -65,6 +67,7 @@ public class EmilysMagic
                         .displayItems((enabledFlags, tab) -> {
                             tab.accept(ModItems.ITEM_ENDER_WAND.get());
                             tab.accept(ModItems.ITEMS_SAPPHIRE_WAND.get());
+                            tab.accept(ModItems.ITEMS_EARTH_WAND.get());
                             tab.accept(ModItems.ITEMS_ICE_WAND.get());
                             tab.accept(ModItems.ITEMS_FIRE_WAND.get());
                             tab.accept(ModItems.ITEMS_POISON_WAND.get());

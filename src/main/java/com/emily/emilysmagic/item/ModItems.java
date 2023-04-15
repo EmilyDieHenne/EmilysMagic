@@ -22,6 +22,8 @@ public class ModItems {
             () -> new ItemIceWand(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ITEMS_SAPPHIRE_WAND = ITEMS.register("sapphire_wand",
             () -> new ItemSapphireWand(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ITEMS_EARTH_WAND = ITEMS.register("earth_wand",
+            () -> new ItemEarthWand(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ITEMS_POISON_WAND = ITEMS.register("poison_wand",
             () -> new ItemPoisonWand(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ITEMS_FIRE_WAND = ITEMS.register("fire_wand",
