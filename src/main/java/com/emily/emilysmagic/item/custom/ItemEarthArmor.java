@@ -24,8 +24,8 @@ public class ItemEarthArmor extends ArmorItem {
             player.getItemBySlot(EquipmentSlot.LEGS).getItem() == ModItems.ITEMS_EARTH_LEGGINGS.get() &&
             player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.ITEMS_EARTH_BOOTS.get()
         ) {
-            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100, 1));
-            player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 100, 1));
+            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100,1));
+            player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100));
         }
 
     }

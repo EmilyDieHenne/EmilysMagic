@@ -88,7 +88,13 @@ public class EmilysMagic
                             tab.accept(ModItems.ITEMS_EARTH_LEGGINGS.get());
                             tab.accept(ModItems.ITEMS_EARTH_BOOTS.get());
 
+                            tab.accept(ModItems.ITEMS_SAPPHIRE_HELMET.get());
+                            tab.accept(ModItems.ITEMS_SAPPHIRE_CHESTPLATE.get());
+                            tab.accept(ModItems.ITEMS_SAPPHIRE_LEGGINGS.get());
+                            tab.accept(ModItems.ITEMS_SAPPHIRE_BOOTS.get());
+
                             tab.accept(ModItems.ITEMS_MANA_CRISTAL.get());
+                            tab.accept(ModItems.ITEMS_SAPPHIRE.get());
                             tab.accept(ModBlocks.MANA_ORE.get());
                             tab.accept(ModBlocks.DEEPSLATE_MANA_ORE.get());
                             tab.accept(ModBlocks.MANA_BLOCK.get());

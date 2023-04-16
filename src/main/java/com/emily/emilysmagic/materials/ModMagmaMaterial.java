@@ -51,11 +51,8 @@ public enum ModMagmaMaterial implements ArmorMaterial {
     public int getDefenseForType(Type type) {
 
         return switch (type.getSlot()) {
-            case HEAD -> 2;
             case CHEST -> 4;
-            case LEGS -> 3;
-            case FEET -> 1;
-            default -> 0;
+            default -> 3;
         };
 
     }

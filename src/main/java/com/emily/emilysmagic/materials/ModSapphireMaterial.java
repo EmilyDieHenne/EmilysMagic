@@ -11,9 +11,9 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
-public enum ModEarthMaterial implements ArmorMaterial {
-    EARTH_MATERIAL(
-            EmilysMagic.MOD_ID + ":earth",
+public enum ModSapphireMaterial implements ArmorMaterial {
+    SAPPHIRE_MATERIAL(
+            EmilysMagic.MOD_ID + ":sapphire",
             50,
             SoundEvents.ARMOR_EQUIP_DIAMOND,
             3.0F,
@@ -31,7 +31,7 @@ public enum ModEarthMaterial implements ArmorMaterial {
     private final float toughness;
     private final LazyLoadedValue<Ingredient> repairIngredient;
 
-    ModEarthMaterial(String name, int enchantability, SoundEvent sound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
+    ModSapphireMaterial(String name, int enchantability, SoundEvent sound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
         this.name = name;
         this.enchantmentValue = enchantability;
         this.sound = sound;
@@ -50,11 +50,15 @@ public enum ModEarthMaterial implements ArmorMaterial {
 
         switch (type.getSlot()){
             case HEAD:
-                return 4;
-            case FEET:
                 return 2;
+            case CHEST:
+                return 4;
+            case LEGS:
+                return 3;
+            case FEET:
+                return 1;
             default:
-                return 5;
+                return 0;
         }
 
     }

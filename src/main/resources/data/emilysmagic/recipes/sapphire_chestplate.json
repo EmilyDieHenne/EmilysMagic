@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S S",
+    "SES",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "emilysmagic:sapphire"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    }
+  },
+  "result": {
+    "item": "emilysmagic:sapphire_chestplate",
+    "count": 1
+  }
+}
