@@ -16,22 +16,21 @@ public enum ModEarthMaterial implements ArmorMaterial {
             EmilysMagic.MOD_ID + ":earth",
             50,
             SoundEvents.ARMOR_EQUIP_DIAMOND,
-            3.0F,
-            0.1F,
+            0,
             () -> {
                 return Ingredient.of(Items.IRON_INGOT);
             }
     );
 
 
-    private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
+
     private final String name;
     private final int enchantmentValue;
     private final SoundEvent sound;
     private final float toughness;
     private final LazyLoadedValue<Ingredient> repairIngredient;
 
-    ModEarthMaterial(String name, int enchantability, SoundEvent sound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
+    ModEarthMaterial(String name, int enchantability, SoundEvent sound, float toughness, Supplier<Ingredient> repairIngredient) {
         this.name = name;
         this.enchantmentValue = enchantability;
         this.sound = sound;

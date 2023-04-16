@@ -1,5 +1,7 @@
 package com.emily.emilysmagic.item.custom;
 
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.AreaEffectCloud;
@@ -13,9 +15,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.List;
 import java.util.function.Predicate;
 
 
@@ -31,6 +35,11 @@ public class ItemPoisonWand extends BowItem {
         return  (p_43017_) -> {
             return true;
         };
+    }
+    @Override
+    public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> components, TooltipFlag tooltipFlag) {
+        components.add(Component.translatable( "item.emilysmagic.poison_wand.desc").withStyle(ChatFormatting.DARK_PURPLE));
+        super.appendHoverText(stack, world, components, tooltipFlag);
     }
     @Override
     @ParametersAreNonnullByDefault

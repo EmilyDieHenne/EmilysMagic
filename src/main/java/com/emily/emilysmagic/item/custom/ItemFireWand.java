@@ -2,6 +2,8 @@ package com.emily.emilysmagic.item.custom;
 
 
 import com.emily.emilysmagic.projectile.FireMagic;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -9,11 +11,14 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.List;
 
 
 public class ItemFireWand extends Item {
@@ -47,7 +52,11 @@ public class ItemFireWand extends Item {
         return super.use( world, player, hand);
 
     }
-
+    @Override
+    public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> components, TooltipFlag tooltipFlag) {
+        components.add(Component.translatable("item.emilysmagic.fire_wand.desc").withStyle(ChatFormatting.DARK_PURPLE));
+        super.appendHoverText(stack, world, components, tooltipFlag);
+    }
     @Override
     @ParametersAreNonnullByDefault
     public boolean hurtEnemy(ItemStack itemStack, LivingEntity entity, LivingEntity player) {

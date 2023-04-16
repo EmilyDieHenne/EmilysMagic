@@ -1,6 +1,9 @@
 package com.emily.emilysmagic.item.custom;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -10,12 +13,15 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.List;
 
 
 public class ItemIceWand extends Item {
@@ -49,27 +55,34 @@ public class ItemIceWand extends Item {
 
         return super.hurtEnemy(itemStack, entity, player);
     }
+    @Override
+    public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> components, TooltipFlag tooltipFlag) {
+        components.add(Component.translatable("item.emilysmagic.ice_wand.desc").withStyle(ChatFormatting.DARK_PURPLE));
 
+        super.appendHoverText(stack, world, components, tooltipFlag);
+    }
     private void replaceWaterWithIce(BlockPos pos, Level world) {
         int size = 3;
+        for(int y = 0; y <= 1; y++) {
+            pos= pos.below(y);
+            for (int x = 0; x <= size; x++) {
+                for (int z = 0; z <= size; z++) {
+                    if (!(x == size && z == size)) {
+                        if (checkIfEmpty(world.getBlockState(pos.north(x).east(z)))) {
+                            world.setBlockAndUpdate(pos.north(x).east(z), Blocks.BLUE_ICE.defaultBlockState());
+                        }
+                        if (checkIfEmpty(world.getBlockState(pos.south(x).east(z)))) {
+                            world.setBlockAndUpdate(pos.south(x).east(z), Blocks.BLUE_ICE.defaultBlockState());
+                        }
+                        if (checkIfEmpty(world.getBlockState(pos.north(x).west(z)))) {
+                            world.setBlockAndUpdate(pos.north(x).west(z), Blocks.BLUE_ICE.defaultBlockState());
+                        }
+                        if (checkIfEmpty(world.getBlockState(pos.south(x).west(z)))) {
+                            world.setBlockAndUpdate(pos.south(x).west(z), Blocks.BLUE_ICE.defaultBlockState());
+                        }
+                    }
 
-        for(int x = 0; x <= size; x++){
-            for(int z = 0; z <= size; z++){
-                if(!(x == size && z == size)){
-                    if(checkIfEmpty(world.getBlockState(pos.north(x).east(z))) ){
-                        world.setBlockAndUpdate(pos.north(x).east(z), Blocks.BLUE_ICE.defaultBlockState());
-                    }
-                    if(checkIfEmpty(world.getBlockState(pos.south(x).east(z)))) {
-                        world.setBlockAndUpdate(pos.south(x).east(z), Blocks.BLUE_ICE.defaultBlockState());
-                    }
-                    if(checkIfEmpty(world.getBlockState(pos.north(x).west(z)))){
-                        world.setBlockAndUpdate(pos.north(x).west(z), Blocks.BLUE_ICE.defaultBlockState());
-                    }
-                    if(checkIfEmpty(world.getBlockState(pos.south(x).west(z)))) {
-                        world.setBlockAndUpdate(pos.south(x).west(z), Blocks.BLUE_ICE.defaultBlockState());
-                    }
                 }
-
             }
         }
 

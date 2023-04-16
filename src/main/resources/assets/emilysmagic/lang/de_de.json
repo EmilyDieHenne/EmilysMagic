@@ -14,6 +14,25 @@
   "item.emilysmagic.earth_chestplate": "Elementarbrustplatte",
   "item.emilysmagic.earth_leggings": "Elementarhose",
   "item.emilysmagic.earth_boots": "Elementarstiefel",
-  "item_group.emilysmagic.emilysmagic": "Emily's Magic"
+  "item_group.emilysmagic.emilysmagic": "Emily's Magic",
+  "item.emilysmagic.sapphire": "Saphir",
+  "item.emilysmagic.poison_wand.desc": "Rechtsklick zum aufladen\nloslassen um Giftwolke zu beschwören",
+  "item.emilysmagic.sapphire_wand.desc": "Rechtsklick für einen Boost",
+  "item.emilysmagic.sapphire_armor.desc": "Boni bei voller Rüstung: Geschwindigkeit II, Langsamer Fall II",
+  "item.emilysmagic.fire_wand.desc": "Rechtsklick um Feuerprojektile zu schießen \nVerbrennt beim Schlagen",
+  "item.emilysmagic.ender_wand.desc": "Rechtsklick zum Teleportieren",
+  "item.emilysmagic.ice_wand.desc": "Rechtsklick um Wasser einzufriehren!\nVerlangsamt beim Schlagen",
+  "item.emilysmagic.lightning_wand.desc": "Rechtsklick um Blitz zu beschwören",
+  "item.emilysmagic.earth_wand.desc": "Rechtsklick zum herunterboosten\nSchlagen um Gegner hochzuwerfen",
+  "item.emilysmagic.earth_armor.desc": "Boni bei voller Rüstung: Schutz, Langsamkeit II",
+  "item.emilysmagic.magma_helmet": "Magmahelm",
+  "item.emilysmagic.magma_chestplate": "Magmahelm",
+  "item.emilysmagic.magma_leggings": "Magmahose",
+  "item.emilysmagic.magma_boots": "Magmaschuhe",
+  "item.emilysmagic.magma_armor.desc": "Boni bei voller Rüstung: Feuerschutz",
+  "item.emilysmagic.sapphire_helmet": "Saphirhelm",
+  "item.emilysmagic.sapphire_chestplate": "Saphirbrustplatte",
+  "item.emilysmagic.sapphire_leggings": "Saphirhose",
+  "item.emilysmagic.sapphire_boots": "Saphirstifel"
 
 }

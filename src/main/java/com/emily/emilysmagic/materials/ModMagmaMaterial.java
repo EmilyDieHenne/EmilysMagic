@@ -18,7 +18,7 @@ public enum ModMagmaMaterial implements ArmorMaterial {
             EmilysMagic.MOD_ID + ":magma",
             50,
             SoundEvents.ARMOR_EQUIP_DIAMOND,
-            3.0F
+            0
 
 
     );
