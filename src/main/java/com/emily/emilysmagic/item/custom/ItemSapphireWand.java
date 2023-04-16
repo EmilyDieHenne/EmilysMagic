@@ -7,6 +7,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
+
+import javax.annotation.ParametersAreNonnullByDefault;
 
 
 public class ItemSapphireWand extends Item {
@@ -15,6 +18,8 @@ public class ItemSapphireWand extends Item {
         super(properties);
     }
     @Override
+    @NotNull
+    @ParametersAreNonnullByDefault
     public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
 
 

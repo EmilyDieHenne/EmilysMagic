@@ -3,6 +3,7 @@ package com.emily.emilysmagic.item;
 import com.emily.emilysmagic.EmilysMagic;
 import com.emily.emilysmagic.item.custom.*;
 import com.emily.emilysmagic.materials.ModEarthMaterial;
+import com.emily.emilysmagic.materials.ModMagmaMaterial;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -38,6 +39,14 @@ public class ModItems {
             () -> new ItemEarthArmor(ModEarthMaterial.EARTH_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1).defaultDurability(115)));
       public static final RegistryObject<Item> ITEMS_EARTH_BOOTS = ITEMS.register("earth_boots",
             () -> new ItemEarthArmor(ModEarthMaterial.EARTH_MATERIAL, ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1).defaultDurability(101)));
+       public static final RegistryObject<Item> ITEMS_MAGMA_HELMET= ITEMS.register("magma_helmet",
+            () -> new ItemMagmaArmor(ModMagmaMaterial.EARTH_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1).defaultDurability(101)));
+     public static final RegistryObject<Item> ITEMS_MAGMA_CHESTPLATE = ITEMS.register("magma_chestplate",
+            () -> new ItemMagmaArmor(ModMagmaMaterial.EARTH_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1).defaultDurability(101)));
+     public static final RegistryObject<Item> ITEMS_MAGMA_LEGGINGS = ITEMS.register("magma_leggings",
+            () -> new ItemMagmaArmor(ModMagmaMaterial.EARTH_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1).defaultDurability(101)));
+     public static final RegistryObject<Item> ITEMS_MAGMA_BOOTS = ITEMS.register("magma_boots",
+            () -> new ItemMagmaArmor(ModMagmaMaterial.EARTH_MATERIAL, ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1).defaultDurability(101)));
 
     public static void register(IEventBus eventBus){
             ITEMS.register(eventBus);

@@ -13,6 +13,9 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.NotNull;
+
+import javax.annotation.ParametersAreNonnullByDefault;
 
 
 public class ItemEnderWand extends Item {
@@ -21,6 +24,8 @@ public class ItemEnderWand extends Item {
         super(properties);
     }
     @Override
+    @NotNull
+    @ParametersAreNonnullByDefault
     public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
 
 

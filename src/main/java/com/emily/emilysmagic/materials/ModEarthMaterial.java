@@ -4,8 +4,6 @@ import com.emily.emilysmagic.EmilysMagic;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.LazyLoadedValue;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorItem.Type;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Items;
@@ -30,22 +28,18 @@ public enum ModEarthMaterial implements ArmorMaterial {
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
     private final String name;
-    private final int durabilityMultiplier;
-    private final int[] slotProtections;
     private final int enchantmentValue;
     private final SoundEvent sound;
     private final float toughness;
-    private final float knockbackResistance;
     private final LazyLoadedValue<Ingredient> repairIngredient;
 
     ModEarthMaterial(String name, int durability, int[] protection, int enchantability, SoundEvent sound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
         this.name = name;
-        this.durabilityMultiplier = durability;
-        this.slotProtections = protection;
+
+
         this.enchantmentValue = enchantability;
         this.sound = sound;
         this.toughness = toughness;
-        this.knockbackResistance = knockbackResistance;
         this.repairIngredient = new LazyLoadedValue<>(repairIngredient);
     }
 

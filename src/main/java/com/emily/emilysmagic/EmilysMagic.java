@@ -10,6 +10,9 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.entity.EntityEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.entity.player.PlayerContainerEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -32,7 +35,9 @@ public class EmilysMagic
         ModBlocks.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
+
         modEventBus.addListener(this::addCreative);
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -73,6 +78,11 @@ public class EmilysMagic
                             tab.accept(ModItems.ITEMS_POISON_WAND.get());
                             tab.accept(ModItems.ITEMS_LIGHTNING_WAND.get());
 
+                            tab.accept(ModItems.ITEMS_MAGMA_HELMET.get());
+                            tab.accept(ModItems.ITEMS_MAGMA_CHESTPLATE.get());
+                            tab.accept(ModItems.ITEMS_MAGMA_LEGGINGS.get());
+                            tab.accept(ModItems.ITEMS_MAGMA_BOOTS.get());
+
                             tab.accept(ModItems.ITEMS_EARTH_HELMET.get());
                             tab.accept(ModItems.ITEMS_EARTH_CHESTPLATE.get());
                             tab.accept(ModItems.ITEMS_EARTH_LEGGINGS.get());
@@ -85,5 +95,7 @@ public class EmilysMagic
                         });
             });
         }
+
+
     }
 }
