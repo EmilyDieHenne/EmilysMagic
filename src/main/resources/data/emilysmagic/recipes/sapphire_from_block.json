@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "emilysmagic:sapphire_block"
+    }
+  ],
+  "result": {
+    "item": "emilysmagic:sapphire",
+    "count": 9
+  }
+}

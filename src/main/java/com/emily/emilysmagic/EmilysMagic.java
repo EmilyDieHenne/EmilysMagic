@@ -99,6 +99,7 @@ public class EmilysMagic
                             tab.accept(ModBlocks.MANA_ORE.get());
                             tab.accept(ModBlocks.DEEPSLATE_MANA_ORE.get());
                             tab.accept(ModBlocks.MANA_BLOCK.get());
+                            tab.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                         });
             });
         }

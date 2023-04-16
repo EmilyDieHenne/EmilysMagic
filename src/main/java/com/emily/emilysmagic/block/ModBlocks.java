@@ -27,6 +27,12 @@ public class ModBlocks {
                     .sound(SoundType.AMETHYST)
                     .strength(6f)
                     .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> SAPPHIRE_BLOCK = registerBlock("sapphire_block",
+            () -> new Block(BlockBehaviour.Properties
+                    .of(Material.STONE)
+                    .sound(SoundType.STONE)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> MANA_ORE = registerBlock("mana_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties
@@ -34,7 +40,6 @@ public class ModBlocks {
                     .sound(SoundType.AMETHYST)
                     .strength(3.0f)
                     .requiresCorrectToolForDrops(), UniformInt.of(2,6)));
-
     public static final RegistryObject<Block> DEEPSLATE_MANA_ORE = registerBlock("deepslate_mana_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties
                     .of(Material.STONE)
